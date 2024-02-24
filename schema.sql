@@ -1,3 +1,7 @@
+-- Create Database DB_conectar_igualdad;
+
+use DB_conectar_igualdad;
+
 CREATE TABLE oficina (
     id_oficina INT PRIMARY KEY IDENTITY,
     nombre VARCHAR(50)
@@ -128,9 +132,9 @@ CREATE TABLE docente_x_materia_x_escuela (
     id_materia INT NOT NULL,
     id_escuela INT NOT NULL,
  
-    CONSTRAINT fk_aplicacion_x_equipo_aplicacion FOREIGN KEY (id_escuela) REFERENCES escuela(id_escuela),
-    CONSTRAINT fk_aplicacion_x_equipo_materia FOREIGN KEY (id_materia) REFERENCES materia(id_materia),
-    CONSTRAINT fk_aplicacion_x_equipo_docente FOREIGN KEY (id_docente) REFERENCES docente(id_docente),
+    CONSTRAINT fk_aplicacion_x_equipo_x_escuela_aplicacion FOREIGN KEY (id_escuela) REFERENCES escuela(id_escuela),
+    CONSTRAINT fk_aplicacion_x_equipo_x_escuela_materia FOREIGN KEY (id_materia) REFERENCES materia(id_materia),
+    CONSTRAINT fk_aplicacion_x_equipo_x_escuela_docente FOREIGN KEY (id_docente) REFERENCES docente(id_docente),
     PRIMARY KEY (id_docente, id_materia, id_escuela)
 )
  
