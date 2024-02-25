@@ -1,4 +1,4 @@
--- Crear un nuevo taller
+GO
 CREATE PROCEDURE taller_create
     @duracion_minutos INT,
     @nombre VARCHAR(50)
@@ -7,7 +7,7 @@ BEGIN
     INSERT INTO taller (duracion_minutos, nombre)
     VALUES (@duracion_minutos, @nombre)
 END;
-
+GO
 -- Modificar un taller existente
 CREATE PROCEDURE taller_update
     @id_taller INT,
@@ -20,7 +20,7 @@ BEGIN
         nombre = @nombre
     WHERE id_taller = @id_taller
 END;
-
+GO
 -- Eliminar un taller existente
 CREATE PROCEDURE taller_delete
     @id_taller INT
