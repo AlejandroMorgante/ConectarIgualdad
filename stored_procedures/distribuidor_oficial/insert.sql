@@ -1,4 +1,3 @@
--- Ejecutar el procedimiento almacenado para crear nuevos distribuidores oficiales
 EXEC distribuidor_oficial_create 'Soluciones Tecnológicas Avanzadas S.A.'
 EXEC distribuidor_oficial_create 'Innovación en Tecnología y Software'
 EXEC distribuidor_oficial_create 'Líderes en Desarrollo Tecnológico'

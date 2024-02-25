@@ -6,7 +6,7 @@ BEGIN
     INSERT INTO materia (nombre)
     VALUES (@nombre)
 END;
-
+GO
 -- Modificar una materia existente
 CREATE PROCEDURE materia_update
     @id_materia INT,
@@ -17,7 +17,7 @@ BEGIN
     SET nombre = @nombre
     WHERE id_materia = @id_materia
 END;
-
+GO
 -- Eliminar una materia existente
 CREATE PROCEDURE materia_delete
     @id_materia INT
