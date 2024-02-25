@@ -1,4 +1,4 @@
--- Crear una nueva aplicación
+GO
 CREATE PROCEDURE aplicacion_create
     @nombre VARCHAR(50),
     @version VARCHAR(50),
@@ -10,7 +10,7 @@ BEGIN
     VALUES (@nombre, @version, @disco_requerido_gb, @id_distribuidor_oficial)
 END;
 
--- Modificar una aplicación existente
+GO
 CREATE PROCEDURE aplicacion_update
     @id_aplicacion INT,
     @nombre VARCHAR(50),
@@ -26,8 +26,7 @@ BEGIN
         id_distribuidor_oficial = @id_distribuidor_oficial
     WHERE id_aplicacion = @id_aplicacion
 END;
-
--- Eliminar una aplicación existente
+GO
 CREATE PROCEDURE aplicacion_delete
     @id_aplicacion INT
 AS
