@@ -1,4 +1,4 @@
--- Create Database DB_conectar_igualdad;
+--Create Database DB_conectar_igualdad;
 
 use DB_conectar_igualdad;
 
@@ -50,6 +50,7 @@ CREATE TABLE servidor (
     nombre VARCHAR(50),
     id_disco_rigido INT NOT NULL,
     id_oficina INT NOT NULL,
+    estado_flg bit,
  
     CONSTRAINT fk_servidor_disco FOREIGN KEY (id_disco_rigido) REFERENCES disco_rigido(id_disco_rigido),
     CONSTRAINT fk_servidor_oficina FOREIGN KEY (id_oficina) REFERENCES oficina(id_oficina)
