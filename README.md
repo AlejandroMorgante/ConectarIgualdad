@@ -17,5 +17,4 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 <table_name>.<action>
 ```
 
-![DER CONECTAR IGUALDAD](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/b039c212-f725-4aa4-a97a-4645d1c24b6d)
-
+![DER CONECTAR IGUALDAD (1)](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/6af65a95-8030-4c10-ab30-7f292ba9cfb8)
