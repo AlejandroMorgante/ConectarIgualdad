@@ -6,7 +6,7 @@ BEGIN
     INSERT INTO oficina (nombre)
     VALUES (@nombre)
 END;
-
+GO
 -- Modificar una oficina existente
 CREATE PROCEDURE oficina_update
     @id_oficina INT,
@@ -17,7 +17,7 @@ BEGIN
     SET nombre = @nombre
     WHERE id_oficina = @id_oficina
 END;
-
+GO
 -- Eliminar una oficina existente
 CREATE PROCEDURE oficina_delete
     @id_oficina INT
