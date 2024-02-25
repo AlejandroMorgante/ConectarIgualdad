@@ -1,6 +1,5 @@
-use DB_conectar_igualdad;
-GO
-CREATE PROCEDURE reemplazo_create
+-- Crear un nuevo reemplazo
+CREATE PROCEDURE Reemplazos.create_reemplazo
     @id_servidor_reemplazado INT,
     @id_servidor_reemplazo INT,
     @fecha_inicio DATE,
@@ -11,8 +10,8 @@ BEGIN
     VALUES (@id_servidor_reemplazado, @id_servidor_reemplazo, @fecha_inicio, @fecha_final)
 END;
 
-Go
-CREATE PROCEDURE reemplazo_update
+-- Modificar un reemplazo existente
+CREATE PROCEDURE Reemplazos.update_reemplazo
     @id_servidor_reemplazado INT,
     @id_servidor_reemplazo INT,
     @fecha_inicio DATE,
@@ -26,8 +25,8 @@ BEGIN
         AND id_servidor_reemplazo = @id_servidor_reemplazo
 END;
 
-Go
-CREATE PROCEDURE reemplazo_delete
+-- Eliminar un reemplazo existente
+CREATE PROCEDURE Reemplazos.delete_reemplazo
     @id_servidor_reemplazado INT,
     @id_servidor_reemplazo INT
 AS
