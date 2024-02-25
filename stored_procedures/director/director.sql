@@ -1,14 +1,14 @@
 -- Crear un nuevo director
-CREATE PROCEDURE Director.create_director
+CREATE PROCEDURE director_create
     @nombre VARCHAR(50)
 AS
 BEGIN
     INSERT INTO director (nombre)
     VALUES (@nombre)
 END;
-
+GO
 -- Modificar un director existente
-CREATE PROCEDURE Director.update_director
+CREATE PROCEDURE director_update
     @id_director INT,
     @nombre VARCHAR(50)
 AS
@@ -17,9 +17,9 @@ BEGIN
     SET nombre = @nombre
     WHERE id_director = @id_director
 END;
-
+GO
 -- Eliminar un director existente
-CREATE PROCEDURE Director.delete_director
+CREATE PROCEDURE director_delete
     @id_director INT
 AS
 BEGIN
