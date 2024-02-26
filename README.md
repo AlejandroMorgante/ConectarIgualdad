@@ -48,3 +48,4 @@ EXEC aplicacion_x_equipo_create 19, 3;
 EXEC aplicacion_x_equipo_create 20, 1;
 ```
 
+[Ver más](docs/QUERIES.md)
