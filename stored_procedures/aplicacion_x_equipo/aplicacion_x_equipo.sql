@@ -1,34 +1,34 @@
-GO 
-CREATE PROCEDURE equipo_x_aplicacion_create
-    @id_equipo INT,
-    @id_aplicacion INT
-AS
-BEGIN
-    INSERT INTO equipo_x_aplicacion (id_equipo, id_aplicacion)
-    VALUES (@id_equipo, @id_aplicacion)
-END;
 GO
-
-CREATE PROCEDURE equipo_x_aplicacion_delete
-    @id_equipo INT,
-    @id_aplicacion INT
-AS
-BEGIN
-    DELETE FROM equipo_x_aplicacion
-    WHERE id_equipo = @id_equipo
-        AND id_aplicacion = @id_aplicacion
-END;
-GO
-
-CREATE PROCEDURE equipo_x_aplicacion_update
-    @id_equipo INT,
+CREATE PROCEDURE aplicacion_x_equipo_create
     @id_aplicacion INT,
-    @id_equipo_nuevo INT,
-    @id_aplicacion_nuevo INT
+    @id_equipo INT
 AS
 BEGIN
-    UPDATE equipo_x_aplicacion
-    SET id_equipo = @id_equipo_nuevo, id_aplicacion = @id_aplicacion_nuevo
-    WHERE id_equipo = @id_equipo AND id_aplicacion = @id_aplicacion
+    INSERT INTO aplicacion_x_equipo (id_aplicacion, id_equipo)
+    VALUES (@id_aplicacion, @id_equipo)
+END;
+GO
+
+CREATE PROCEDURE aplicacion_x_equipo_delete
+    @id_aplicacion INT,
+    @id_equipo INT
+AS
+BEGIN
+    DELETE FROM aplicacion_x_equipo
+    WHERE id_aplicacion = @id_aplicacion AND id_equipo = @id_equipo
+END;
+GO
+
+GO
+CREATE PROCEDURE aplicacion_x_equipo_update
+    @id_aplicacion INT,
+    @id_equipo INT,
+    @id_aplicacion_nuevo INT,
+    @id_equipo_nuevo INT
+AS
+BEGIN
+    UPDATE aplicacion_x_equipo
+    SET id_aplicacion = @id_aplicacion_nuevo, id_equipo = @id_equipo_nuevo
+    WHERE id_aplicacion = @id_aplicacion AND id_equipo = @id_equipo
 END;
 GO
