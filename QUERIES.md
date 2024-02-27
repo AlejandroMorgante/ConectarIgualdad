@@ -4,6 +4,8 @@
 ```
 select * from docentes_que_dieron_mas_talleres_que_la_media
 ```
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/27cf77af-d52d-4643-948a-e2dd75e22fe4)
+
 
 #### servidores_reemplazados
 ```
