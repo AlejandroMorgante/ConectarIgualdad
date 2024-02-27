@@ -1059,26 +1059,3 @@ BEGIN
     WHERE id_servidor_reemplazado = @id_servidor_reemplazado
         AND id_servidor_reemplazo = @id_servidor_reemplazo
 END;
-
-EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
-EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
-EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
-EXEC reemplazo_create 2, 5, '2024-03-12', '2024-03-20'
-EXEC reemplazo_create 4, 7, '2024-03-25', '2024-04-05'
-EXEC reemplazo_create 6, 9, '2024-04-10', '2024-04-15'
-EXEC reemplazo_create 8, 11, '2024-04-18', '2024-04-25'
-EXEC reemplazo_create 10, 13, '2024-05-01', '2024-05-10'
-EXEC reemplazo_create 12, 15, '2024-05-12', '2024-05-20'
-EXEC reemplazo_create 14, 17, '2024-05-25', '2024-06-05'
-EXEC reemplazo_create 16, 19, '2024-06-10', '2024-06-15'
-EXEC reemplazo_create 18, 20, '2024-06-18', '2024-06-25'
-EXEC reemplazo_create 20, 2, '2024-07-01', '2024-07-10'
-EXEC reemplazo_create 3, 6, '2024-07-12', '2024-07-20'
-EXEC reemplazo_create 5, 8, '2024-07-25', '2024-08-05'
-EXEC reemplazo_create 7, 10, '2024-08-10', '2024-08-15'
-EXEC reemplazo_create 9, 12, '2024-08-18', '2024-08-25'
-EXEC reemplazo_create 11, 14, '2024-09-01', '2024-09-10'
-EXEC reemplazo_create 13, 16, '2024-09-12', '2024-09-20'
-EXEC reemplazo_create 15, 18, '2024-09-25', '2024-10-05'
-EXEC reemplazo_create 17, 19, '2024-10-10', '2024-10-15'
-EXEC reemplazo_create 19, 1, '2024-10-18', '2024-10-25'
