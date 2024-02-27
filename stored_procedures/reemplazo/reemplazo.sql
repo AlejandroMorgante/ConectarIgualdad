@@ -1,5 +1,4 @@
--- Crear un nuevo reemplazo
-CREATE PROCEDURE Reemplazos.create_reemplazo
+CREATE PROCEDURE reeemplazo_create
     @id_servidor_reemplazado INT,
     @id_servidor_reemplazo INT,
     @fecha_inicio DATE,
@@ -10,8 +9,8 @@ BEGIN
     VALUES (@id_servidor_reemplazado, @id_servidor_reemplazo, @fecha_inicio, @fecha_final)
 END;
 
--- Modificar un reemplazo existente
-CREATE PROCEDURE Reemplazos.update_reemplazo
+GO
+CREATE PROCEDURE Reemplazos_update
     @id_servidor_reemplazado INT,
     @id_servidor_reemplazo INT,
     @fecha_inicio DATE,
@@ -25,8 +24,8 @@ BEGIN
         AND id_servidor_reemplazo = @id_servidor_reemplazo
 END;
 
--- Eliminar un reemplazo existente
-CREATE PROCEDURE Reemplazos.delete_reemplazo
+GO
+CREATE PROCEDURE reemplazo_delete
     @id_servidor_reemplazado INT,
     @id_servidor_reemplazo INT
 AS
