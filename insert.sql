@@ -28,7 +28,6 @@ BEGIN
     WHERE id_orientacion = @id_orientacion
 END;
 
-truncate table orientacion
 
 EXEC orientacion_create 'Orientación en Ciencias Sociales y Humanidades'
 EXEC orientacion_create 'Orientación en Economía y Administración'
@@ -81,7 +80,6 @@ BEGIN
     WHERE id_director = @id_director
 END;
 
-truncate table director;
 EXEC director_create 'Juan Martínez'
 EXEC director_create 'María Rodríguez'
 EXEC director_create 'Luis González'
@@ -142,7 +140,6 @@ BEGIN
     WHERE id_escuela = @id_escuela
 END;
 GO
-truncate table escuela
 EXEC escuela_create 1, 'Buenos Aires', 'Avenida de Mayo 123', 1
 EXEC escuela_create 2, 'Córdoba', 'Calle San Martín 456', 2
 EXEC escuela_create 3, 'Rosario', 'Avenida Pellegrini 789', 3
@@ -198,7 +195,6 @@ BEGIN
     WHERE id_escuela = @id_escuela and id_orientacion = @id_orientacion
 END;
 
-truncate table escuela_x_orientacion
 EXEC escuela_x_orientacion_create 1, 1
 EXEC escuela_x_orientacion_create 1, 2
 EXEC escuela_x_orientacion_create 2, 3
@@ -250,7 +246,6 @@ BEGIN
     WHERE id_distribuidor_oficial = @id_distribuidor_oficial
 END;
 
-truncate table distribuidor_oficial
 EXEC distribuidor_oficial_create 'Soluciones Tecnológicas Avanzadas S.A.'
 EXEC distribuidor_oficial_create 'Innovación en Tecnología y Software'
 EXEC distribuidor_oficial_create 'Líderes en Desarrollo Tecnológico'
@@ -310,7 +305,6 @@ BEGIN
     WHERE id_aplicacion = @id_aplicacion
 END;
 
-truncate table aplicacion 
 EXEC aplicacion_create 'Word', '2022', 2, 1
 EXEC aplicacion_create 'Excel', '2022', 3, 1
 EXEC aplicacion_create 'PowerPoint', '2022', 2, 1
@@ -362,7 +356,6 @@ BEGIN
     WHERE id_oficina = @id_oficina
 END;
 
-TRUNCATE TABLE oficina
 EXEC oficina_create 'Oficina de Tecnología Educativa';
 EXEC oficina_create 'Centro de Innovación Tecnológica';
 EXEC oficina_create 'Oficina de Investigación y Desarrollo';
@@ -417,7 +410,6 @@ BEGIN
     WHERE id_disco_rigido = @id_disco_rigido
 END;
 
-truncate table disco_rigido
 EXEC disco_rigido_create 'Seagate', 500
 EXEC disco_rigido_create 'Western Digital', 1000
 EXEC disco_rigido_create 'Samsung', 2000
@@ -476,7 +468,6 @@ BEGIN
 END;
 GO
 
-truncate table equipo 
 EXEC equipo_create 8, 1, 1
 EXEC equipo_create 16, 2, 2
 EXEC equipo_create 8, 3, 3
@@ -534,7 +525,6 @@ BEGIN
 END;
 GO
 
-truncate table aplicacion_x_equipo
 EXEC aplicacion_x_equipo_create 1, 1
 EXEC aplicacion_x_equipo_create 1, 2
 EXEC aplicacion_x_equipo_create 2, 3
@@ -586,7 +576,6 @@ BEGIN
     WHERE id_recurso = @id_recurso
 END;
 
-truncate table recurso
 EXEC recurso_create 'Proyector multimedia'
 EXEC recurso_create 'Pizarra blanca'
 EXEC recurso_create 'Computadora portátil'
@@ -640,7 +629,6 @@ BEGIN
     WHERE id_taller = @id_taller
 END;
 
-truncate table taller
 EXEC taller_create 120, 'Introducción a la Programación'
 EXEC taller_create 90, 'Diseño de Interfaces de Usuario'
 EXEC taller_create 150, 'Programación Avanzada con Python'
@@ -698,7 +686,6 @@ BEGIN
         AND id_taller = @id_taller
 END;
 
-truncate table taller_x_recurso
 EXEC taller_x_recurso_create 1, 1
 EXEC taller_x_recurso_create 2, 1
 EXEC taller_x_recurso_create 3, 2
@@ -761,7 +748,6 @@ EXEC taller_x_recurso_create 3, 10
         WHERE id_servidor = @id_servidor
     END;
 
-truncate table servidor 
 EXEC servidor_create '192.168.1.10', 'ar-west-a', 1, 1, 1
 EXEC servidor_create '192.168.1.11', 'ar-west-b', 2, 2, 1
 EXEC servidor_create '192.168.1.12', 'ar-west-c', 3, 3, 1
@@ -828,7 +814,6 @@ BEGIN
     WHERE id_docente = @id_docente
 END;
 
-truncate table docente
 EXEC docente_create 11111101, 'Alan', 'Turing', 'Enigma Street', '1912-06-23', 1
 EXEC docente_create 11111102, 'Grace', 'Hopper', 'Binary Avenue', '1906-12-09', 2
 EXEC docente_create 11111103, 'Tim', 'Berners-Lee', 'WWW Road', '1955-06-08', 3
@@ -880,7 +865,6 @@ BEGIN
     WHERE id_materia = @id_materia
 END;
 
-truncate table materia
 EXEC materia_create 'Introducción a la Programación'
 EXEC materia_create 'Algoritmos y Estructuras de Datos'
 EXEC materia_create 'Programación Orientada a Objetos'
@@ -945,7 +929,6 @@ BEGIN
         AND id_escuela = @id_escuela
 END;
 
-truncate table docente_x_materia_x_escuela
 EXEC docente_x_materia_x_escuela_create 3, 12, 8
 EXEC docente_x_materia_x_escuela_create 5, 4, 11
 EXEC docente_x_materia_x_escuela_create 2, 15, 18
@@ -1017,7 +1000,6 @@ BEGIN
         AND fecha = @fecha
 END;
 
-truncate table escuela_x_taller_x_docente
 EXEC escuela_x_taller_docente_create 10, 1, 3, '2024-03-01' -- Escuela "San Antonio", taller "Matemáticas Avanzadas", docente "María Gutiérrez"
 EXEC escuela_x_taller_docente_create 3, 4, 5, '2024-03-02' -- Escuela "San Pablo", taller "Biología Molecular", docente "Juan Martínez"
 EXEC escuela_x_taller_docente_create 6, 5, 4, '2024-03-03' -- Escuela "Santa Lucía", taller "Programación Web", docente "Ana Pérez"
@@ -1041,7 +1023,7 @@ EXEC escuela_x_taller_docente_create 4, 3, 1, '2024-03-20' -- Escuela "Santa Ele
 
 -- REEMPLAZO --
 GO
-CREATE PROCEDURE reeemplazo_create
+CREATE PROCEDURE reemplazo_create
     @id_servidor_reemplazado INT,
     @id_servidor_reemplazo INT,
     @fecha_inicio DATE,
@@ -1053,7 +1035,7 @@ BEGIN
 END;
 
 GO
-CREATE PROCEDURE Reemplazos_update
+CREATE PROCEDURE reemplazo_update
     @id_servidor_reemplazado INT,
     @id_servidor_reemplazo INT,
     @fecha_inicio DATE,
@@ -1078,24 +1060,25 @@ BEGIN
         AND id_servidor_reemplazo = @id_servidor_reemplazo
 END;
 
-truncate table reemplazo
-    EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
-    EXEC reemplazo_create 2, 5, '2024-03-12', '2024-03-20'
-    EXEC reemplazo_create 4, 7, '2024-03-25', '2024-04-05'
-    EXEC reemplazo_create 6, 9, '2024-04-10', '2024-04-15'
-    EXEC reemplazo_create 8, 11, '2024-04-18', '2024-04-25'
-    EXEC reemplazo_create 10, 13, '2024-05-01', '2024-05-10'
-    EXEC reemplazo_create 12, 15, '2024-05-12', '2024-05-20'
-    EXEC reemplazo_create 14, 17, '2024-05-25', '2024-06-05'
-    EXEC reemplazo_create 16, 19, '2024-06-10', '2024-06-15'
-    EXEC reemplazo_create 18, 20, '2024-06-18', '2024-06-25'
-    EXEC reemplazo_create 20, 2, '2024-07-01', '2024-07-10'
-    EXEC reemplazo_create 3, 6, '2024-07-12', '2024-07-20'
-    EXEC reemplazo_create 5, 8, '2024-07-25', '2024-08-05'
-    EXEC reemplazo_create 7, 10, '2024-08-10', '2024-08-15'
-    EXEC reemplazo_create 9, 12, '2024-08-18', '2024-08-25'
-    EXEC reemplazo_create 11, 14, '2024-09-01', '2024-09-10'
-    EXEC reemplazo_create 13, 16, '2024-09-12', '2024-09-20'
-    EXEC reemplazo_create 15, 18, '2024-09-25', '2024-10-05'
-    EXEC reemplazo_create 17, 19, '2024-10-10', '2024-10-15'
-    EXEC reemplazo_create 19, 1, '2024-10-18', '2024-10-25'
+EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
+EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
+EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
+EXEC reemplazo_create 2, 5, '2024-03-12', '2024-03-20'
+EXEC reemplazo_create 4, 7, '2024-03-25', '2024-04-05'
+EXEC reemplazo_create 6, 9, '2024-04-10', '2024-04-15'
+EXEC reemplazo_create 8, 11, '2024-04-18', '2024-04-25'
+EXEC reemplazo_create 10, 13, '2024-05-01', '2024-05-10'
+EXEC reemplazo_create 12, 15, '2024-05-12', '2024-05-20'
+EXEC reemplazo_create 14, 17, '2024-05-25', '2024-06-05'
+EXEC reemplazo_create 16, 19, '2024-06-10', '2024-06-15'
+EXEC reemplazo_create 18, 20, '2024-06-18', '2024-06-25'
+EXEC reemplazo_create 20, 2, '2024-07-01', '2024-07-10'
+EXEC reemplazo_create 3, 6, '2024-07-12', '2024-07-20'
+EXEC reemplazo_create 5, 8, '2024-07-25', '2024-08-05'
+EXEC reemplazo_create 7, 10, '2024-08-10', '2024-08-15'
+EXEC reemplazo_create 9, 12, '2024-08-18', '2024-08-25'
+EXEC reemplazo_create 11, 14, '2024-09-01', '2024-09-10'
+EXEC reemplazo_create 13, 16, '2024-09-12', '2024-09-20'
+EXEC reemplazo_create 15, 18, '2024-09-25', '2024-10-05'
+EXEC reemplazo_create 17, 19, '2024-10-10', '2024-10-15'
+EXEC reemplazo_create 19, 1, '2024-10-18', '2024-10-25'
