@@ -1,25 +1,51 @@
 
 ## QUERIES
-### Query 1
+#### Docentes que dieron más talleres que la media
 ```
-EXEC aplicacion_x_equipo_create 1, 5;
-EXEC aplicacion_x_equipo_create 2, 7;
-EXEC aplicacion_x_equipo_create 3, 9;
-EXEC aplicacion_x_equipo_create 4, 11;
-EXEC aplicacion_x_equipo_create 5, 13;
-EXEC aplicacion_x_equipo_create 6, 15;
-EXEC aplicacion_x_equipo_create 7, 17;
-EXEC aplicacion_x_equipo_create 8, 19;
-EXEC aplicacion_x_equipo_create 9, 2;
-EXEC aplicacion_x_equipo_create 10, 4;
-EXEC aplicacion_x_equipo_create 11, 6;
-EXEC aplicacion_x_equipo_create 12, 8;
-EXEC aplicacion_x_equipo_create 13, 10;
-EXEC aplicacion_x_equipo_create 14, 12;
-EXEC aplicacion_x_equipo_create 15, 14;
-EXEC aplicacion_x_equipo_create 16, 16;
-EXEC aplicacion_x_equipo_create 17, 18;
-EXEC aplicacion_x_equipo_create 18, 20;
-EXEC aplicacion_x_equipo_create 19, 3;
-EXEC aplicacion_x_equipo_create 20, 1;
+select * from docentes_que_dieron_mas_talleres_que_la_media
+```
+
+#### servidores_reemplazados
+```
+select * from servidores_reemplazados
+```
+
+#### cantidad de talleres por escuela 
+```
+select * from cantidad_de_talleres_por_escuela
+```
+
+#### distribuidores mas oficiales
+```
+select * from distribuidores_mas_populares
+```
+
+#### docentes sin equipo
+```
+select * from docentes_sin_equipo
+```
+
+#### escuelas sin talleres
+```
+select * from escuela_sin_talleres
+```
+
+#### aplicaciones no usadas
+```
+select * from aplicaciones_no_usadas
+```
+
+#### cantidad de docentes por servidor
+```
+select * from cantidad_de_docentes_por_servidor
+```
+
+#### servidores reemplazados entre fechas 
+```
+exec servidores_reemplazados_entre '2024-01-01' and '2024-03-03'
+```
+
+#### talleres dictados en una fecha determinada
+```
+exec talleres_dictados_en_escuela_fecha '2024-01-01'
 ```
