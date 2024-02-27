@@ -166,6 +166,29 @@ EXEC disco_rigido_create 'Maxtor', 500
 EXEC disco_rigido_create 'Patriot', 1000
 EXEC disco_rigido_create 'PNY', 2000
 
+
+EXEC servidor_create '192.168.1.10', 'ar-west-a', 1, 1, 1
+EXEC servidor_create '192.168.1.11', 'ar-west-b', 2, 2, 1
+EXEC servidor_create '192.168.1.12', 'ar-west-c', 3, 3, 1
+EXEC servidor_create '192.168.1.13', 'ar-east-a', 4, 4, 1
+EXEC servidor_create '192.168.1.14', 'ar-east-b', 5, 5, 1
+EXEC servidor_create '192.168.1.15', 'ar-north-a', 6, 6, 1
+EXEC servidor_create '192.168.1.16', 'ar-north-b', 7, 7, 1
+EXEC servidor_create '192.168.1.17', 'ar-north-c', 8, 8, 1
+EXEC servidor_create '192.168.1.18', 'ar-south-a', 9, 9, 1
+EXEC servidor_create '192.168.1.19', 'ar-south-b', 10, 10, 1
+EXEC servidor_create '192.168.1.20', 'ar-central-a', 11, 11, 1
+EXEC servidor_create '192.168.1.21', 'ar-central-b', 12, 12, 1
+EXEC servidor_create '192.168.1.22', 'ar-central-c', 13, 13, 1
+EXEC servidor_create '192.168.1.23', 'ar-central-d', 14, 14, 1
+EXEC servidor_create '192.168.1.24', 'ar-central-e', 15, 15, 1
+EXEC servidor_create '192.168.1.25', 'ar-central-f', 16, 16, 1
+EXEC servidor_create '192.168.1.26', 'ar-central-g', 17, 17, 1
+EXEC servidor_create '192.168.1.27', 'ar-central-h', 18, 18, 1
+EXEC servidor_create '192.168.1.28', 'ar-central-i', 19, 19, 1
+EXEC servidor_create '192.168.1.29', 'ar-central-j', 20, 20, 1
+
+
 EXEC docente_create 11111101, 'Alan', 'Turing', 'Enigma Street', '1912-06-23', 1
 EXEC docente_create 11111102, 'Grace', 'Hopper', 'Binary Avenue', '1906-12-09', 2
 EXEC docente_create 11111103, 'Tim', 'Berners-Lee', 'WWW Road', '1955-06-08', 3
@@ -186,7 +209,6 @@ EXEC docente_create 11111117, 'Margaret', 'Hamilton', 'Software Engineering Boul
 EXEC docente_create 11111118, 'Dennis', 'Ritchie', 'UNIX Lane', '1941-09-09', 18
 EXEC docente_create 11111119, 'James', 'Gosling', 'Java Avenue', '1955-05-19', 19
 EXEC docente_create 11111120, 'Andrew', 'Tanenbaum', 'Networking Street', '1944-03-16', 20
-
 
 
 EXEC equipo_create 8, 1, 1
@@ -291,28 +313,6 @@ EXEC taller_x_recurso_create 17, 9
 EXEC taller_x_recurso_create 18, 9
 EXEC taller_x_recurso_create 19, 10
 EXEC taller_x_recurso_create 3, 10
-
-
-EXEC servidor_create '192.168.1.10', 'ar-west-a', 1, 1, 1
-EXEC servidor_create '192.168.1.11', 'ar-west-b', 2, 2, 1
-EXEC servidor_create '192.168.1.12', 'ar-west-c', 3, 3, 1
-EXEC servidor_create '192.168.1.13', 'ar-east-a', 4, 4, 1
-EXEC servidor_create '192.168.1.14', 'ar-east-b', 5, 5, 1
-EXEC servidor_create '192.168.1.15', 'ar-north-a', 6, 6, 1
-EXEC servidor_create '192.168.1.16', 'ar-north-b', 7, 7, 1
-EXEC servidor_create '192.168.1.17', 'ar-north-c', 8, 8, 1
-EXEC servidor_create '192.168.1.18', 'ar-south-a', 9, 9, 1
-EXEC servidor_create '192.168.1.19', 'ar-south-b', 10, 10, 1
-EXEC servidor_create '192.168.1.20', 'ar-central-a', 11, 11, 1
-EXEC servidor_create '192.168.1.21', 'ar-central-b', 12, 12, 1
-EXEC servidor_create '192.168.1.22', 'ar-central-c', 13, 13, 1
-EXEC servidor_create '192.168.1.23', 'ar-central-d', 14, 14, 1
-EXEC servidor_create '192.168.1.24', 'ar-central-e', 15, 15, 1
-EXEC servidor_create '192.168.1.25', 'ar-central-f', 16, 16, 1
-EXEC servidor_create '192.168.1.26', 'ar-central-g', 17, 17, 1
-EXEC servidor_create '192.168.1.27', 'ar-central-h', 18, 18, 1
-EXEC servidor_create '192.168.1.28', 'ar-central-i', 19, 19, 1
-EXEC servidor_create '192.168.1.29', 'ar-central-j', 20, 20, 1
 
 
 EXEC materia_create 'Introducción a la Programación'
