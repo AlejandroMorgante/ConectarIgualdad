@@ -40,6 +40,27 @@ EXEC escuela_create 18, 'Paraná', 'Avenida Ramírez 456', 18
 EXEC escuela_create 19, 'Formosa', 'Calle Rivadavia 789', 19
 EXEC escuela_create 20, 'Santiago del Estero', 'Avenida Moreno 101', 20
 
+EXEC orientacion_create 'Orientación en Ciencias Sociales y Humanidades'
+EXEC orientacion_create 'Orientación en Economía y Administración'
+EXEC orientacion_create 'Orientación en Ciencias Naturales y Salud'
+EXEC orientacion_create 'Orientación en Arte y Diseño'
+EXEC orientacion_create 'Orientación en Tecnología e Informática'
+EXEC orientacion_create 'Orientación en Comunicación y Medios'
+EXEC orientacion_create 'Orientación en Educación Física y Deportes'
+EXEC orientacion_create 'Orientación en Idiomas y Literatura'
+EXEC orientacion_create 'Orientación en Matemáticas y Física'
+EXEC orientacion_create 'Orientación en Química y Biología'
+EXEC orientacion_create 'Orientación en Ciencias Agrarias y Ambientales'
+EXEC orientacion_create 'Orientación en Turismo y Hotelería'
+EXEC orientacion_create 'Orientación en Construcción y Arquitectura'
+EXEC orientacion_create 'Orientación en Derecho y Ciencias Sociales'
+EXEC orientacion_create 'Orientación en Informática y Programación'
+EXEC orientacion_create 'Orientación en Ciencias Políticas y Relaciones Internacionales'
+EXEC orientacion_create 'Orientación en Psicología y Ciencias del Comportamiento'
+EXEC orientacion_create 'Orientación en Ingeniería y Tecnología Industrial'
+EXEC orientacion_create 'Orientación en Arte y Cultura'
+EXEC orientacion_create 'Orientación en Ciencias de la Computación'
+
 EXEC escuela_x_orientacion_create 1, 1
 EXEC escuela_x_orientacion_create 1, 2
 EXEC escuela_x_orientacion_create 2, 3
