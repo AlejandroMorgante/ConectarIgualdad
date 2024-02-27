@@ -20,6 +20,6 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 ![DER CONECTAR IGUALDAD (3)](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/a85ade35-870c-4915-adf4-517efdc46877)
 
 
-### [Ver más](QUERIES.md)
+### [QUERIES](QUERIES.md)
 
 
