@@ -375,8 +375,6 @@ EXEC escuela_x_taller_x_docente_create 8, 2, 2, '2024-03-19' -- Escuela "San Luc
 EXEC escuela_x_taller_x_docente_create 4, 3, 1, '2024-03-20' -- Escuela "Santa Elena", taller "Historia del Arte", docente "José Rodríguez"
 
 EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
-EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
-EXEC reemplazo_create 1, 3, '2024-03-01', '2024-03-10'
 EXEC reemplazo_create 2, 5, '2024-03-12', '2024-03-20'
 EXEC reemplazo_create 4, 7, '2024-03-25', '2024-04-05'
 EXEC reemplazo_create 6, 9, '2024-04-10', '2024-04-15'
