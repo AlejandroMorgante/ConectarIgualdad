@@ -1,5 +1,5 @@
 Go
-CREATE PROCEDURE escuela_x_taller_docente_create
+CREATE PROCEDURE escuela_x_taller_x_docente_create
     @id_taller INT,
     @id_escuela INT,
     @id_docente INT,
@@ -11,7 +11,7 @@ BEGIN
 END;
 
 Go
-CREATE PROCEDURE escuela_x_taller_docente_update
+CREATE PROCEDURE escuela_x_taller_x_docente_update
     @id_taller INT,
     @id_escuela INT,
     @id_docente INT,
@@ -34,7 +34,7 @@ BEGIN
 END;
 
 GO
-CREATE PROCEDURE escuela_x_taller_docente_delete
+CREATE PROCEDURE escuela_x_taller_x_docente_delete
     @id_taller INT,
     @id_escuela INT,
     @id_docente INT,
