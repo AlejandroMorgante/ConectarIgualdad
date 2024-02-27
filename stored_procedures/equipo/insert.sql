@@ -1,0 +1,21 @@
+-- Crear nuevos equipos
+EXEC equipo_create 8, 1, 1
+EXEC equipo_create 16, 2, 2
+EXEC equipo_create 8, 3, 3
+EXEC equipo_create 16, 4, 4
+EXEC equipo_create 32, 5, 5
+EXEC equipo_create 8, 6, 6
+EXEC equipo_create 16, 7, 7
+EXEC equipo_create 8, 8, 8
+EXEC equipo_create 16, 9, 9
+EXEC equipo_create 32, 10, 10
+EXEC equipo_create 8, 11, 11
+EXEC equipo_create 16, 12, 12
+EXEC equipo_create 8, 13, 13
+EXEC equipo_create 16, 14, 14
+EXEC equipo_create 32, 15, 15
+EXEC equipo_create 8, 16, 16
+EXEC equipo_create 16, 17, 17
+EXEC equipo_create 8, 18, 18
+EXEC equipo_create 16, 19, 19
+EXEC equipo_create 32, 20, 20
