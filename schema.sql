@@ -3,49 +3,49 @@
 use DB_conectar_igualdad;
 
 CREATE TABLE oficina (
-    id_oficina INT PRIMARY KEY IDENTITY,
+    id_oficina INT PRIMARY KEY IDENTITY(1,1),
     nombre VARCHAR(50)
 )
  
 CREATE TABLE materia (
-    id_materia INT PRIMARY KEY IDENTITY,
+    id_materia INT PRIMARY KEY IDENTITY(1,1),
     nombre VARCHAR(50)
 )
  
 CREATE TABLE recurso (
-    id_recurso INT PRIMARY KEY IDENTITY,
+    id_recurso INT PRIMARY KEY IDENTITY(1,1),
     nombre VARCHAR(50)
 )
  
 CREATE TABLE taller (
-    id_taller INT PRIMARY KEY IDENTITY,
+    id_taller INT PRIMARY KEY IDENTITY(1,1),
     duracion_minutos INT,
     nombre VARCHAR(50) 
 )
  
 CREATE TABLE director (
-    id_director INT PRIMARY KEY IDENTITY,
+    id_director INT PRIMARY KEY IDENTITY(1,1),
     nombre VARCHAR(50),
 )
  
 CREATE TABLE orientacion (
-    id_orientacion INT PRIMARY KEY IDENTITY,
+    id_orientacion INT PRIMARY KEY IDENTITY(1,1),
     nombre VARCHAR(50)
 )
  
 CREATE TABLE disco_rigido (
-    id_disco_rigido INT PRIMARY KEY IDENTITY,
+    id_disco_rigido INT PRIMARY KEY IDENTITY(1,1),
     marca VARCHAR(50),
     capacidad_gb INT,
 )
  
 CREATE TABLE distribuidor_oficial (
-    id_distribuidor_oficial INT PRIMARY KEY IDENTITY,
+    id_distribuidor_oficial INT PRIMARY KEY IDENTITY(1,1),
     nombre VARCHAR(50)
 )
  
 CREATE TABLE servidor (
-    id_servidor INT PRIMARY KEY IDENTITY,
+    id_servidor INT PRIMARY KEY IDENTITY(1,1),
     ip VARCHAR(50),
     nombre VARCHAR(50),
     id_disco_rigido INT NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE servidor (
 )
  
 CREATE TABLE docente (
-    id_docente INT IDENTITY PRIMARY KEY,
+    id_docente INT IDENTITY(1,1) PRIMARY KEY,
     dni INT,
     nombre VARCHAR(50),
     apellido VARCHAR(50),
@@ -69,7 +69,7 @@ CREATE TABLE docente (
 )
  
 CREATE TABLE equipo (
-    id_equipo INT PRIMARY KEY IDENTITY,
+    id_equipo INT PRIMARY KEY IDENTITY(1,1),
     ram_gb INT,
     id_disco_rigido INT NOT NULL,
     id_docente INT NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE reemplazo (
 )
  
 CREATE TABLE escuela (
-    id_escuela INT PRIMARY KEY IDENTITY,
+    id_escuela INT PRIMARY KEY IDENTITY(1,1),
     numero INT,
     localidad VARCHAR(50),
     domicilio VARCHAR(50),
@@ -101,7 +101,7 @@ CREATE TABLE escuela (
 )
  
 CREATE TABLE aplicacion (
-    id_aplicacion INT PRIMARY KEY IDENTITY,
+    id_aplicacion INT PRIMARY KEY IDENTITY(1,1),
     nombre VARCHAR(50),
     version VARCHAR(50),
     disco_requerido_gb INT,
