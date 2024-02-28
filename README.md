@@ -14,8 +14,9 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 ```
 <table_name>.<action>
 ```
-```
+
 #### Para Rupturas de "Many To Many"
+```
 <table1>_x_<table2>_x_...<tableN>"
 ```
 
