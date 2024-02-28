@@ -24,6 +24,7 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 ## [Visualization](visualization) 📈
 
 
+### Diagramas
 
 <hr>
 
