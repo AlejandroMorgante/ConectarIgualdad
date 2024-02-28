@@ -25,6 +25,11 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 
 ![DER CONECTAR IGUALDAD (3)](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/a85ade35-870c-4915-adf4-517efdc46877)
 
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/50493e77-66b1-4dea-97e1-ca1d59a62741)
+
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/fd1d7dc9-6bcc-4d31-91b9-9a2d680737a4)
+
+
 
 
 
