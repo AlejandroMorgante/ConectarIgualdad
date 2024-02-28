@@ -29,6 +29,22 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/fd1d7dc9-6bcc-4d31-91b9-9a2d680737a4)
 
+## Diccionario de Datos
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/88f25f18-430c-4974-8e0c-cb8edfec454f)
+
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/e1c8aaa1-7122-4c75-a9a5-53f706628c16)
+
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/7b0b40ff-3707-4d57-ada8-42a7c35bbe10)
+
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/9242b759-5a4e-4cb8-9e1e-1b297202ff4a)
+
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/e61b782f-5a7a-42c6-94f3-9f08c4770e97)
+
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/dc8a4207-5273-462b-987f-92c1b9362a0e)
+
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/aeeb839a-d73b-440e-93c6-e762e92c8008)
+
+
 
 
 
