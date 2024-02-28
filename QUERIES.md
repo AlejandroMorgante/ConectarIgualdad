@@ -37,6 +37,103 @@ HAVING COUNT(t.id_taller) > (
   ```
 </details>
 
+
+### Cantidad de talleres por escuela 
+```sql
+select * from cantidad_de_talleres_por_escuela
+```
+
+```sql
+SELECT * FROM cantidad_de_talleres_por_escuela ORDER BY cantidad_talleres DESC
+```
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/d2134bd0-65cf-4e69-b259-2458ebe7a36f)
+
+<details>
+<summary>
+  SQL
+</summary>
+  
+  ```sql
+CREATE VIEW cantidad_de_talleres_por_escuela AS
+SELECT e.numero, e.domicilio, e.localidad, COUNT(t.id_taller) as cantidad_talleres FROM escuela e
+JOIN escuela_x_taller_x_docente etd ON etd.id_escuela = e.id_escuela
+JOIN taller t ON etd.id_taller = t.id_taller
+GROUP BY e.numero, e.domicilio, e.localidad
+  ```
+</details>
+
+### Talleres sin fecha o no realizados hasta la fecha
+```sql
+select * from talleres_no_realizados
+```
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/cf4cfd06-bc9a-4675-9fe8-a197280d1cd3)
+
+<details>
+<summary>
+  SQL
+</summary>
+  
+  ```sql
+CREATE VIEW talleres_no_realizados AS
+SELECT t.id_taller,t.nombre, t.duracion_minutos, etd.fecha  FROM taller t 
+LEFT JOIN escuela_x_taller_x_docente etd ON etd.id_taller = t.id_taller 
+WHERE t.id_taller NOT IN (
+    SELECT id_taller FROM escuela_x_taller_x_docente
+) OR 
+GETDATE() < etd.fecha
+  ```
+</details>
+
+### Cantidad de docentes por servidor
+```sql
+SELECT * FROM cantidad_de_docentes_por_servidor
+```
+
+```sql
+select * from cantidad_de_docentes_por_servidor ORDER BY cantidad_docentes DESC
+```
+
+<details>
+<summary>
+  SQL
+</summary>
+  
+  ```sql
+CREATE VIEW cantidad_de_docentes_por_servidor AS 
+SELECT s.id_servidor, s.nombre, COUNT(d.id_docente) as cantidad_docentes FROM servidor s 
+LEFT JOIN docente d ON d.id_servidor = s.id_servidor 
+GROUP BY s.id_servidor, s.nombre
+  ```
+</details>
+
+### Servidores que estan actualmente siendo reemplazados
+```sql
+SELECT * FROM servidores_reemplazados
+```
+
+<details>
+<summary>
+  SQL
+</summary>
+  
+  ```sql
+CREATE VIEW servidores_reemplazados AS
+SELECT s.nombre FROM servidor s
+JOIN reemplazo r ON r.id_servidor_reemplazo = s.id_servidor
+WHERE s.estado_flg = 0 AND EXISTS (
+    SELECT * FROM reemplazo r 
+    WHERE r.id_servidor_reemplazado = s.id_servidor 
+    AND GETDATE() BETWEEN r.fecha_final AND r.fecha_inicio
+)
+  ```
+</details>
+
+### talleres dictados en una fecha determinada
+```sql
+exec talleres_dictados_en_escuela_fecha '2024-01-01'
+```
+
+
 ### servidores que fueron reemplazados mas de X cantidad de veces
 ```sql
 EXEC servidores_reemplazados_mas_de_inclusive 0
@@ -58,185 +155,3 @@ BEGIN
 END
   ```
 </details>
-
-### Cantidad de talleres por escuela 
-```sql
-select * from cantidad_de_talleres_por_escuela
-```
-
-```sql
-SELECT * FROM cantidad_de_talleres_por_escuela ORDER BY cantidad_talleres DESC
-```
-
-<details>
-<summary>
-  SQL
-</summary>
-  
-  ```sql
-CREATE VIEW cantidad_de_talleres_por_escuela AS
-SELECT e.numero, e.domicilio, e.localidad, COUNT(t.id_taller) as cantidad_talleres FROM escuela e
-JOIN escuela_x_taller_x_docente etd ON etd.id_escuela = e.id_escuela
-JOIN taller t ON etd.id_taller = t.id_taller
-GROUP BY e.numero, e.domicilio, e.localidad
-  ```
-</details>
-<details>
-<summary>
-  Otro uso
-</summary>
-  
-  ```sql
-CREATE VIEW cantidad_de_talleres_por_escuela AS
-SELECT e.numero, e.domicilio, e.localidad, COUNT(t.id_taller) as cantidad_talleres FROM escuela e
-JOIN escuela_x_taller_x_docente etd ON etd.id_escuela = e.id_escuela
-JOIN taller t ON etd.id_taller = t.id_taller
-GROUP BY e.numero, e.domicilio, e.localidad
-  ```
-</details>
-
-### Talleres sin fecha o no realizados hasta la fecha
-```sql
-select * from talleres_no_realizados
-```
-
-<details>
-<summary>
-  SQL
-</summary>
-  
-  ```sql
-CREATE VIEW talleres_no_realizados AS
-SELECT * FROM taller t 
-JOIN escuela_x_taller_x_docente etd ON etd.id_taller = t.id_taller 
-WHERE t.id_taller NOT IN (
-    SELECT id_taller FROM escuela_x_taller_x_docente
-) OR 
-GETDATE() < etd.fecha
-  ```
-</details>
-
-### docentes sin equipo
-```sql
-select * from docentes_sin_equipo
-```
-
-<details>
-<summary>
-  SQL
-</summary>
-  
-  ```sql
-  CREATE VIEW docentes_que_dieron_mas_talleres_que_la_media AS
-SELECT d.nombre, COUNT(t.id_taller) as total_talleres FROM docente d 
-JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-JOIN taller t ON t.id_taller = etd.id_taller
-GROUP BY d.nombre 
-HAVING COUNT(t.id_taller) > (
-    SELECT COUNT(t.id_taller)/COUNT(d.id_docente) FROM docente d 
-    JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-    JOIN taller t ON t.id_taller = etd.id_taller
-)
-  ```
-</details>
-
-### escuelas sin talleres
-```sql
-select * from escuela_sin_talleres
-```
-
-<details>
-<summary>
-  SQL
-</summary>
-  
-  ```sql
-  CREATE VIEW docentes_que_dieron_mas_talleres_que_la_media AS
-SELECT d.nombre, COUNT(t.id_taller) as total_talleres FROM docente d 
-JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-JOIN taller t ON t.id_taller = etd.id_taller
-GROUP BY d.nombre 
-HAVING COUNT(t.id_taller) > (
-    SELECT COUNT(t.id_taller)/COUNT(d.id_docente) FROM docente d 
-    JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-    JOIN taller t ON t.id_taller = etd.id_taller
-)
-  ```
-</details>
-
-### aplicaciones no usadas
-```sql
-select * from aplicaciones_no_usadas
-```
-
-<details>
-<summary>
-  SQL
-</summary>
-  
-  ```sql
-  CREATE VIEW docentes_que_dieron_mas_talleres_que_la_media AS
-SELECT d.nombre, COUNT(t.id_taller) as total_talleres FROM docente d 
-JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-JOIN taller t ON t.id_taller = etd.id_taller
-GROUP BY d.nombre 
-HAVING COUNT(t.id_taller) > (
-    SELECT COUNT(t.id_taller)/COUNT(d.id_docente) FROM docente d 
-    JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-    JOIN taller t ON t.id_taller = etd.id_taller
-)
-  ```
-</details>
-
-### cantidad de docentes por servidor
-```sql
-select * from cantidad_de_docentes_por_servidor
-```
-
-<details>
-<summary>
-  SQL
-</summary>
-  
-  ```sql
-  CREATE VIEW docentes_que_dieron_mas_talleres_que_la_media AS
-SELECT d.nombre, COUNT(t.id_taller) as total_talleres FROM docente d 
-JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-JOIN taller t ON t.id_taller = etd.id_taller
-GROUP BY d.nombre 
-HAVING COUNT(t.id_taller) > (
-    SELECT COUNT(t.id_taller)/COUNT(d.id_docente) FROM docente d 
-    JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-    JOIN taller t ON t.id_taller = etd.id_taller
-)
-  ```
-</details>
-
-### servidores reemplazados entre fechas 
-```sql
-exec servidores_reemplazados_entre '2024-01-01' and '2024-03-03'
-```
-
-<details>
-<summary>
-  SQL
-</summary>
-  
-  ```sql
-  CREATE VIEW docentes_que_dieron_mas_talleres_que_la_media AS
-SELECT d.nombre, COUNT(t.id_taller) as total_talleres FROM docente d 
-JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-JOIN taller t ON t.id_taller = etd.id_taller
-GROUP BY d.nombre 
-HAVING COUNT(t.id_taller) > (
-    SELECT COUNT(t.id_taller)/COUNT(d.id_docente) FROM docente d 
-    JOIN escuela_x_taller_x_docente etd ON etd.id_docente = d.id_docente
-    JOIN taller t ON t.id_taller = etd.id_taller
-)
-  ```
-</details>
-
-### talleres dictados en una fecha determinada
-```sql
-exec talleres_dictados_en_escuela_fecha '2024-01-01'
-```
