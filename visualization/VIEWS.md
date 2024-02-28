@@ -121,6 +121,9 @@ GROUP BY s.id_servidor, s.nombre
 SELECT * FROM servidores_reemplazados
 ```
 
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/9f866fd2-cafb-4be9-a49c-5d35e1430f64)
+
+
 <details>
 <summary>
   SQL
@@ -128,12 +131,11 @@ SELECT * FROM servidores_reemplazados
   
   ```sql
 CREATE VIEW servidores_reemplazados AS
-SELECT s.nombre FROM servidor s
-JOIN reemplazo r ON r.id_servidor_reemplazo = s.id_servidor
+SELECT s.* FROM servidor s
 WHERE s.estado_flg = 0 AND EXISTS (
     SELECT * FROM reemplazo r 
-    WHERE r.id_servidor_reemplazado = s.id_servidor 
-    AND GETDATE() BETWEEN r.fecha_final AND r.fecha_inicio
+    WHERE r.id_servidor_reemplazado = s.id_servidor
+    AND GETDATE() BETWEEN r.fecha_inicio AND r.fecha_final 
 )
   ```
 </details>
