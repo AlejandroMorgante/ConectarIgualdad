@@ -62,7 +62,7 @@ GROUP BY e.numero, e.domicilio, e.localidad
   ```
 </details>
 
-### Talleres sin fecha o no realizados hasta la fecha
+### Talleres sin fecha o no realizados hasta la fecha actual
 ```sql
 select * from talleres_no_realizados
 ```
@@ -125,34 +125,6 @@ WHERE s.estado_flg = 0 AND EXISTS (
     WHERE r.id_servidor_reemplazado = s.id_servidor 
     AND GETDATE() BETWEEN r.fecha_final AND r.fecha_inicio
 )
-  ```
-</details>
-
-### talleres dictados en una fecha determinada
-```sql
-exec talleres_dictados_en_escuela_fecha '2024-01-01'
-```
-
-
-### servidores que fueron reemplazados mas de X cantidad de veces
-```sql
-EXEC servidores_reemplazados_mas_de_inclusive 0
-```
-<details>
-<summary>
-  SQL
-</summary>
-  
-  ```sql
-CREATE PROCEDURE servidores_reemplazados_mas_de_inclusive 
-  @cantidad INT
-AS
-BEGIN
-    SELECT s.id_servidor, s.ip, s.nombre, COUNT(r.id_servidor_reemplazado) as veces_reemplazado FROM servidor s 
-    JOIN reemplazo r on r.id_servidor_reemplazado = s.id_servidor
-    GROUP BY s.id_servidor, s.ip, s.nombre 
-    HAVING COUNT(r.id_servidor_reemplazado) >= @cantidad
-END
   ```
 </details>
 
