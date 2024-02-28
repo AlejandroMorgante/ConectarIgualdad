@@ -139,7 +139,3 @@ WHERE s.estado_flg = 0 AND EXISTS (
 )
   ```
 </details>
-
-
-
-#### [STORE_PROCEDURES](STORE_PROCEDURES.md)
