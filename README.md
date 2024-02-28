@@ -34,6 +34,7 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 ![Fixed_Conectar_Igualdad drawio](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/160979658/d8b75bd1-bbe9-46c3-b7df-14bb303210df)
 
 <hr>
+
 ![41b1429c-e4e6-4ab2-9935-146b5e43193a](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/160979658/93a82a0c-2974-41e6-8db8-45889807442a)
 
 ## Diccionario de Datos
