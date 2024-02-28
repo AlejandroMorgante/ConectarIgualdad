@@ -1,5 +1,4 @@
 # Conectar Igualdad
-
 El programa Conectar/Igualdad del Ministerio de Educación ha permitido que los docentes de escuelas primarias y secundarias reciban una computadora para desarrollar sus tareas docentes. De cada docente, sabemos su DNI (único), nombre y apellido, domicilio y fecha de nacimiento, y en qué materias dicta clases. A su vez, sabemos que cada computadora tiene un identificador único, capacidad RAM de memoria, y su disco rígido, del cual sabemos la marca y capacidad.
 
 Cada computadora, a su vez, tiene instalados al menos una o varias aplicaciones, de los cuales sabemos su nombre y número de versión (ambos atributos combinados permiten identificar cada aplicación en forma univoca), el distribuidor oficial y cuánta capacidad de disco necesita para ser instalado. Una aplicación puede no estar instalado en una computadora, pero puede estar instalada en varias computadoras.
