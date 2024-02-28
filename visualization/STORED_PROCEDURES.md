@@ -1,5 +1,5 @@
 
-## STORE PROCEDURES
+## STORED PROCEDURES
 
 ### Escuelas que dieron X taller
 ```sql
