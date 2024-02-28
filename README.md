@@ -31,7 +31,7 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 
 <hr>
 
-![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/fd1d7dc9-6bcc-4d31-91b9-9a2d680737a4)
+![Fixed_Conectar_Igualdad drawio](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/160979658/d8b75bd1-bbe9-46c3-b7df-14bb303210df)
 
 <hr>
 
