@@ -98,6 +98,9 @@ SELECT * FROM cantidad_de_docentes_por_servidor
 SELECT * FROM cantidad_de_docentes_por_servidor ORDER BY cantidad_docentes DESC
 ```
 
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/460ddd51-724b-4398-9d7e-aa8c60cc6f75)
+
+
 <details>
 <summary>
   SQL
