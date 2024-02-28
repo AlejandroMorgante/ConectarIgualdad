@@ -9,16 +9,21 @@ Los talleres se dictan en diferentes escuelas del país. En una escuela, se dict
 
 De las escuelas, sabemos el número y la localidad (combinación que la identifica en forma univoca), orientaciones (si es bachillerato, técnico, comercial, etc. o combinación de las orientaciones), domicilio formado por calle y número, y el nombre del director. Cada docente se conecta a los servidores habilitados por el Ministerio de Educación. Un docente se conecta a un solo servidor, pero un servidor puede tener información de varios docentes. De cada servidor, sabemos el IP (único), nombre, capacidad del disco rígido, marca y oficina en la que se encuentra en el ministerio. Cuando un servidor deja de funcionar, puede ser reemplazado por uno o varios servidores, y un servidor puede reemplazar también a uno o varios servidores. En el caso de los reemplazos, necesitamos saber en qué períodos (fecha de inicio y fecha final) se produjo.
 
+## [VISUALIZATION](ConectarIgualdad/visualization)
+
 
 ### Nomenclatura
 #### Para Procedimientos Almacenados
 ```
 <table_name>.<action>
+
+#### Para Rupturas de "Many To Many"
+<table1>_x_<table2>_x_...<tableN>"
 ```
 
 ![DER CONECTAR IGUALDAD (3)](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/a85ade35-870c-4915-adf4-517efdc46877)
 
 
-### [QUERIES](QUERIES.md)
+
 
 
