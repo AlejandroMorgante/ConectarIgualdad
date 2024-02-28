@@ -1,5 +1,5 @@
 
-## QUERIES
+## VIEWS
 ### Docentes que dieron más talleres que la media
 ```sql
 select * from docentes_que_dieron_mas_talleres_que_la_media
