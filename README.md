@@ -1,4 +1,4 @@
-# Conectar Igualdad
+# Conectar Igualdad 💻
 El programa Conectar/Igualdad del Ministerio de Educación ha permitido que los docentes de escuelas primarias y secundarias reciban una computadora para desarrollar sus tareas docentes. De cada docente, sabemos su DNI (único), nombre y apellido, domicilio y fecha de nacimiento, y en qué materias dicta clases. A su vez, sabemos que cada computadora tiene un identificador único, capacidad RAM de memoria, y su disco rígido, del cual sabemos la marca y capacidad.
 
 Cada computadora, a su vez, tiene instalados al menos una o varias aplicaciones, de los cuales sabemos su nombre y número de versión (ambos atributos combinados permiten identificar cada aplicación en forma univoca), el distribuidor oficial y cuánta capacidad de disco necesita para ser instalado. Una aplicación puede no estar instalado en una computadora, pero puede estar instalada en varias computadoras.
@@ -9,16 +9,28 @@ Los talleres se dictan en diferentes escuelas del país. En una escuela, se dict
 
 De las escuelas, sabemos el número y la localidad (combinación que la identifica en forma univoca), orientaciones (si es bachillerato, técnico, comercial, etc. o combinación de las orientaciones), domicilio formado por calle y número, y el nombre del director. Cada docente se conecta a los servidores habilitados por el Ministerio de Educación. Un docente se conecta a un solo servidor, pero un servidor puede tener información de varios docentes. De cada servidor, sabemos el IP (único), nombre, capacidad del disco rígido, marca y oficina en la que se encuentra en el ministerio. Cuando un servidor deja de funcionar, puede ser reemplazado por uno o varios servidores, y un servidor puede reemplazar también a uno o varios servidores. En el caso de los reemplazos, necesitamos saber en qué períodos (fecha de inicio y fecha final) se produjo.
 
-
 ### Nomenclatura
 #### Para Procedimientos Almacenados
 ```
 <table_name>.<action>
 ```
 
+#### Para Rupturas de "Many To Many"
+```
+<table1>_x_<table2>_x_...<tableN>"
+```
+
+
+## [Visualization](visualization) 📈
+
 ![DER CONECTAR IGUALDAD (3)](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/a85ade35-870c-4915-adf4-517efdc46877)
 
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/50493e77-66b1-4dea-97e1-ca1d59a62741)
 
-### [QUERIES](QUERIES.md)
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/fd1d7dc9-6bcc-4d31-91b9-9a2d680737a4)
+
+
+
+
 
 
