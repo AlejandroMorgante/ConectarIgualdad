@@ -2,7 +2,7 @@
 ## VIEWS
 ### Docentes que dieron más talleres que la media
 ```sql
-select * from docentes_que_dieron_mas_talleres_que_la_media
+SELECT * FROM docentes_que_dieron_mas_talleres_que_la_media
 ```
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/27cf77af-d52d-4643-948a-e2dd75e22fe4)
 
@@ -37,10 +37,11 @@ HAVING COUNT(t.id_taller) > (
   ```
 </details>
 
+<br />
 
 ### Cantidad de talleres por escuela 
 ```sql
-select * from cantidad_de_talleres_por_escuela
+SELECT * FROM cantidad_de_talleres_por_escuela
 ```
 
 ```sql
@@ -62,9 +63,11 @@ GROUP BY e.numero, e.domicilio, e.localidad
   ```
 </details>
 
+<br />
+
 ### Talleres sin fecha o no realizados hasta la fecha actual
 ```sql
-select * from talleres_no_realizados
+SELECT * FROM talleres_no_realizados
 ```
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/cf4cfd06-bc9a-4675-9fe8-a197280d1cd3)
 
@@ -84,13 +87,15 @@ GETDATE() < etd.fecha
   ```
 </details>
 
+<br />
+
 ### Cantidad de docentes por servidor
 ```sql
 SELECT * FROM cantidad_de_docentes_por_servidor
 ```
 
 ```sql
-select * from cantidad_de_docentes_por_servidor ORDER BY cantidad_docentes DESC
+SELECT * FROM cantidad_de_docentes_por_servidor ORDER BY cantidad_docentes DESC
 ```
 
 <details>
@@ -105,6 +110,8 @@ LEFT JOIN docente d ON d.id_servidor = s.id_servidor
 GROUP BY s.id_servidor, s.nombre
   ```
 </details>
+
+<br />
 
 ### Servidores que estan actualmente siendo reemplazados
 ```sql
