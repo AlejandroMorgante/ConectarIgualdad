@@ -54,8 +54,6 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 
 ## Dashboard
 
-<hr>
-
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/2d549402-0edb-459c-8d50-93579a358549)
 
 
