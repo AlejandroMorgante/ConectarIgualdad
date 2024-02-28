@@ -56,7 +56,7 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 
 <hr>
 
-![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/f9cb1d01-1906-4e1b-a417-acbb3413a39e)
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/2d549402-0edb-459c-8d50-93579a358549)
 
 
 
