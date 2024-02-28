@@ -25,10 +25,15 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/41b1429c-e4e6-4ab2-9935-146b5e43193a)
 
+<hr>
 
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/50493e77-66b1-4dea-97e1-ca1d59a62741)
 
+<hr>
+
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/fd1d7dc9-6bcc-4d31-91b9-9a2d680737a4)
+
+<hr>
 
 ## Diccionario de Datos
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/88f25f18-430c-4974-8e0c-cb8edfec454f)
