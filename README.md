@@ -52,7 +52,11 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/aeeb839a-d73b-440e-93c6-e762e92c8008)
 
+## Dashboard
 
+<hr>
+
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/f9cb1d01-1906-4e1b-a417-acbb3413a39e)
 
 
 
