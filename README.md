@@ -23,7 +23,8 @@ De las escuelas, sabemos el número y la localidad (combinación que la identifi
 
 ## [Visualization](visualization) 📈
 
-![DER CONECTAR IGUALDAD (3)](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/a85ade35-870c-4915-adf4-517efdc46877)
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/41b1429c-e4e6-4ab2-9935-146b5e43193a)
+
 
 ![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/62363051/50493e77-66b1-4dea-97e1-ca1d59a62741)
 
