@@ -1,16 +1,38 @@
 
 ## STORE PROCEDURES
 
-### Talleres dictados en una fecha determinada
+### Escuelas que dieron X taller
 ```sql
-exec talleres_dictados_en_escuela_fecha '2024-01-01'
+EXEC escuelas_que_dieron_taller 3
 ```
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/162a36a6-b930-42cd-9a68-8c1affecf86d)
 
+<details>
+<summary>
+  SQL
+</summary>
+  
+  ```sql
+CREATE PROCEDURE escuelas_que_dieron_taller
+    @id_taller INT
+AS 
+BEGIN
+    SELECT e.* FROM escuela e 
+    JOIN escuela_x_taller_x_docente etd ON etd.id_escuela = e.id_escuela 
+    JOIN taller t ON t.id_taller = etd.id_taller
+    WHERE etd.id_taller = @id_taller
+END
+  ```
+</details>
+
+ 
 
 ### Servidores que fueron reemplazados mas de X cantidad de veces
 ```sql
-EXEC servidores_reemplazados_mas_de_inclusive 0
+EXEC servidores_reemplazados_mas_de_inclusive 1
 ```
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/9db9dc49-f4c7-4cad-a87c-d6c8b78d6d70)
+
 <details>
 <summary>
   SQL
@@ -33,6 +55,8 @@ END
 ```sql
 EXEC docente_espacio_libre_en_disco 5
 ```
+![image](https://github.com/AlejandroMorgante/ConectarIgualdad/assets/30799094/4951f9d4-24e3-400f-b22d-4d42328fb3b5)
+
 <details>
 <summary>
   SQL
@@ -67,4 +91,4 @@ END
 
 
 
-#### [STORE_PROCEDURES](STORE_PROCEDURES.md)
+#### [EJEMPOS](EJEMPLOS.md)
